@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ImageCard from "./components/imageCard";
 import ImageSearch from "./components/ImageSearch";
+import ImageScroll from "./components/ImageScroll";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -20,7 +21,8 @@ function App() {
   }, [term]);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto font-serif">
+      {/* <ImageScroll /> */}
       <ImageSearch searchText={(text) => setTerm(text)} />
 
       {!isLoading && images.length === 0 && (
